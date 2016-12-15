@@ -28,7 +28,17 @@ namespace Calculator
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button senderButton = sender as Button;
-            this.NumberDisplay.Text += senderButton.Content;
+
+            if (this.NumberDisplay.Text == "0")
+            {
+                //Do stuff when text is "0"
+                this.NumberDisplay.Text = senderButton.Content as string;
+            }
+            else
+            {
+                //Do stuff when text isn't "0"
+                this.NumberDisplay.Text += senderButton.Content;
+            }
         }
     }
 }
