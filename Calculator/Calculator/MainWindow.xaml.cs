@@ -28,7 +28,7 @@ namespace Calculator
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button senderButton = sender as Button;
-            this.NumberDisplay.Text = senderButton.Content as string;
+            this.NumberDisplay.Text += senderButton.Content;
         }
     }
 }
