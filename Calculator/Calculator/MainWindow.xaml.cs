@@ -40,5 +40,20 @@ namespace Calculator
                 this.NumberDisplay.Text += senderButton.Content;
             }
         }
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            Button senderButton = sender as Button;
+
+            if (this.NumberDisplay2.Text == "0")
+            {
+                //Do stuff when text is "0"
+                this.NumberDisplay2.Text = senderButton.Content as string;
+            }
+            else
+            {
+                //Do stuff when text isn't "0"
+                this.NumberDisplay2.Text += senderButton.Content;
+            }
+        }
     }
 }
