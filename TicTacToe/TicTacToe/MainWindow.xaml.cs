@@ -20,6 +20,7 @@ namespace TicTacToe
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool shouldPlaceAnO = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -27,6 +28,19 @@ namespace TicTacToe
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button senderButton = sender as Button;
+            if (senderButton.Content == "")
+            {
+                if (shouldPlaceAnO)
+                {
+                    shouldPlaceAnO = false;
+                    senderButton.Content = "O";
+                }
+                else
+                {
+                    shouldPlaceAnO = true;
+                    senderButton.Content = "X";
+                }
+            }
         }
     }
 }
