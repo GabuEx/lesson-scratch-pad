@@ -119,6 +119,7 @@ namespace TicTacToe
             BottomLeftButton.Content = "";
             BottomMiddleButton.Content = "";
             BottomRightButton.Content = "";
+            TextDisplay.Text = "";
         }
     }
 }
