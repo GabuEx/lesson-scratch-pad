@@ -90,6 +90,14 @@ namespace TicTacToe
             {
                 winner = TopRightButton.Content as string;
             }
+            if (winner == "X")
+            {
+                TextDisplay.Text = "X wins!";
+            }
+            else if (winner == "O")
+            {
+                TextDisplay.Text = "O wins!";
+            }
         }
     }
 }
