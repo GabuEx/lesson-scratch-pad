@@ -21,6 +21,7 @@ namespace TicTacToe
     public partial class MainWindow : Window
     {
         private bool shouldPlaceAnO = false;
+        private bool playerHasWon = false;
         public MainWindow()
         {
             InitializeComponent();
