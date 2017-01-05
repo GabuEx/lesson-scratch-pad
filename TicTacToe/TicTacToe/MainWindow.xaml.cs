@@ -28,6 +28,7 @@ namespace TicTacToe
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button senderButton = sender as Button;
+            string winner = "";
             if (senderButton.Content == "")
             {
                 if (shouldPlaceAnO)
@@ -45,49 +46,49 @@ namespace TicTacToe
                 TopLeftButton.Content == TopMiddleButton.Content &&
                 TopMiddleButton.Content == TopRightButton.Content)
             {
-                //Stuff
+                winner = TopLeftButton.Content as string;
             }
             else if (MiddleLeftButton.Content != "" &&
                 MiddleLeftButton.Content == MiddleMiddleButton.Content &&
                 MiddleMiddleButton.Content == MiddleRightButton.Content)
-            { 
-                //Stuff
+            {
+                winner = MiddleLeftButton.Content as string;
             }
             else if (BottomLeftButton.Content != "" &&
                 BottomLeftButton.Content == BottomMiddleButton.Content &&
                 BottomMiddleButton.Content == BottomRightButton.Content)
             {
-                //Stuff
+                winner = BottomLeftButton.Content as string;
             }
             else if (TopLeftButton.Content != "" &&
                 TopLeftButton.Content == MiddleLeftButton.Content &&
                 MiddleLeftButton.Content == BottomLeftButton.Content)
             {
-                //Stuff
+                winner = TopLeftButton.Content as string;
             }
             else if (TopMiddleButton.Content != "" &&
                 TopMiddleButton.Content == MiddleMiddleButton.Content &&
                 MiddleMiddleButton.Content == BottomMiddleButton.Content)
             {
-                //Stuff
+                winner = TopMiddleButton.Content as string;
             }
             else if (TopRightButton.Content != "" &&
                 TopRightButton.Content == MiddleRightButton.Content &&
                 MiddleRightButton.Content == BottomRightButton.Content)
             {
-                //Stuff
+                winner = TopRightButton.Content as string;
             }
             else if (TopLeftButton.Content != "" &&
                 TopLeftButton.Content == MiddleMiddleButton.Content &&
                 MiddleMiddleButton.Content == BottomRightButton.Content)
             {
-                //Stuff
+                winner = TopLeftButton.Content as string;
             }
             else if (TopRightButton.Content != "" &&
                TopRightButton.Content == MiddleMiddleButton.Content &&
                MiddleMiddleButton.Content == BottomLeftButton.Content)
             {
-                //Stuff
+                winner = TopRightButton.Content as string;
             }
         }
     }
