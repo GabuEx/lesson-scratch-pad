@@ -17,16 +17,18 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button Content="" Name="TopLeftButton"  Grid.Row="1" Grid.Column="0" Click="Button_Click"/>
-        <Button Content="" Name="TopMiddleButton" Grid.Row="1" Grid.Column="1" Click="Button_Click"/>
-        <Button Content="" Name="TopRightButton" Grid.Row="1" Grid.Column="2" Click="Button_Click"/>
-        <Button Content="" Name="MiddleLeftButton" Grid.Row="2" Grid.Column="0" Click="Button_Click"/>
-        <Button Content="" Name="MiddleMiddleButton" Grid.Row="2" Grid.Column="1" Click="Button_Click"/>
-        <Button Content="" Name="MiddleRightButton" Grid.Row="2" Grid.Column="2" Click="Button_Click"/>
-        <Button Content="" Name="BottomLeftButton" Grid.Row="3" Grid.Column="0" Click="Button_Click"/>
-        <Button Content="" Name="BottomMiddleButton" Grid.Row="3" Grid.Column="1" Click="Button_Click"/>
-        <Button Content="" Name="BottomRightButton" Grid.Row="3" Grid.Column="2" Click="Button_Click"/>
+        <Button Content="" Name="TopLeftButton"  Grid.Row="2" Grid.Column="0" Click="Button_Click"/>
+        <Button Content="" Name="TopMiddleButton" Grid.Row="2" Grid.Column="1" Click="Button_Click"/>
+        <Button Content="" Name="TopRightButton" Grid.Row="2" Grid.Column="2" Click="Button_Click"/>
+        <Button Content="" Name="MiddleLeftButton" Grid.Row="3" Grid.Column="0" Click="Button_Click"/>
+        <Button Content="" Name="MiddleMiddleButton" Grid.Row="3" Grid.Column="1" Click="Button_Click"/>
+        <Button Content="" Name="MiddleRightButton" Grid.Row="3" Grid.Column="2" Click="Button_Click"/>
+        <Button Content="" Name="BottomLeftButton" Grid.Row="4" Grid.Column="0" Click="Button_Click"/>
+        <Button Content="" Name="BottomMiddleButton" Grid.Row="4" Grid.Column="1" Click="Button_Click"/>
+        <Button Content="" Name="BottomRightButton" Grid.Row="4" Grid.Column="2" Click="Button_Click"/>
+        <Button Content="" Name="ResetButton"  Grid.Row="1" Grid.Column="1" Click="Button_Click2"/>
         <TextBlock x:Name="TextDisplay" Text="" Grid.ColumnSpan="3" Grid.Row="0" TextAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Window>

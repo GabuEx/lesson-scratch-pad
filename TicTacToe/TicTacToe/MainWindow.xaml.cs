@@ -27,6 +27,7 @@ namespace TicTacToe
             InitializeComponent();
         }
         private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click2(object sender, RoutedEventArgs e);
         {
             Button senderButton = sender as Button;
             string winner = "";
