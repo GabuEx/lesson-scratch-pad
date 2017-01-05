@@ -98,10 +98,12 @@ namespace TicTacToe
             if (winner == "X")
             {
                 TextDisplay.Text = "X wins!";
+                playerHasWon = true;
             }
             else if (winner == "O")
             {
                 TextDisplay.Text = "O wins!";
+                playerHasWon = true;
             }
         }
     }
