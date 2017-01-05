@@ -30,6 +30,10 @@ namespace TicTacToe
         {
             Button senderButton = sender as Button;
             string winner = "";
+            if (playerHasWon)
+            {
+                return;
+            }
             if (senderButton.Content == "")
             {
                 if (shouldPlaceAnO)
