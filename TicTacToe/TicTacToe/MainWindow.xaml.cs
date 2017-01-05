@@ -108,7 +108,17 @@ namespace TicTacToe
         }
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
-
+            shouldPlaceAnO = false;
+            playerHasWon = false;
+            TopLeftButton.Content = "";
+            TopMiddleButton.Content = "";
+            TopRightButton.Content = "";
+            MiddleLeftButton.Content = "";
+            MiddleMiddleButton.Content = "";
+            MiddleRightButton.Content = "";
+            BottomLeftButton.Content = "";
+            BottomMiddleButton.Content = "";
+            BottomRightButton.Content = "";
         }
     }
 }
