@@ -44,6 +44,14 @@ namespace TicTacToe
                 BottomMiddleButton,
                 BottomRightButton,
             };
+            Button aiSelectedButton = null;
+
+            do
+            {
+                aiSelectedButton = squareButtons[random.Next(0, 8)];
+            } while (aiSelectedButton.Content != "");
+
+            PlayToSquare(aiSelectedButton);
         }
 
         private void PlayToSquare(Button button)
