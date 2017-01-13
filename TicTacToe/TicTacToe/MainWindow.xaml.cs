@@ -26,25 +26,31 @@ namespace TicTacToe
         {
             InitializeComponent();
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button senderButton = sender as Button;
+            PlayToSquare(senderButton);
+        }
+
+        private void PlayToSquare(Button button)
+        {
             string winner = "";
             if (playerHasWon)
             {
                 return;
             }
-            if (senderButton.Content == "")
+            if (button.Content == "")
             {
                 if (shouldPlaceAnO)
                 {
                     shouldPlaceAnO = false;
-                    senderButton.Content = "O";
+                    button.Content = "O";
                 }
                 else
                 {
                     shouldPlaceAnO = true;
-                    senderButton.Content = "X";
+                    button.Content = "X";
                 }
             }
             if (TopLeftButton.Content != "" &&
@@ -106,6 +112,7 @@ namespace TicTacToe
                 playerHasWon = true;
             }
         }
+
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
             shouldPlaceAnO = false;
