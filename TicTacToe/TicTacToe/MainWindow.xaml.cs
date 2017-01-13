@@ -22,6 +22,7 @@ namespace TicTacToe
     {
         private bool shouldPlaceAnO = false;
         private bool playerHasWon = false;
+        private Random random = new Random();
         public MainWindow()
         {
             InitializeComponent();
@@ -31,42 +32,18 @@ namespace TicTacToe
         {
             Button senderButton = sender as Button;
             PlayToSquare(senderButton);
-            if (TopLeftButton.Content == "")
+            Button[] squareButtons =
             {
-                PlayToSquare(TopLeftButton);
-            }
-            else if (TopMiddleButton.Content == "")
-            {
-                PlayToSquare(TopMiddleButton);
-            }
-            else if (TopRightButton.Content == "")
-            {
-                PlayToSquare(TopRightButton);
-            }
-            else if (MiddleLeftButton.Content == "")
-            {
-                PlayToSquare(MiddleLeftButton);
-            }
-            else if (MiddleMiddleButton.Content == "")
-            {
-                PlayToSquare(MiddleMiddleButton);
-            }
-            else if (MiddleRightButton.Content == "")
-            {
-                PlayToSquare(MiddleRightButton);
-            }
-            else if (BottomLeftButton.Content == "")
-            {
-                PlayToSquare(BottomLeftButton);
-            }
-            else if (BottomMiddleButton.Content == "")
-            {
-                PlayToSquare(BottomMiddleButton);
-            }
-            else if (BottomRightButton.Content == "")
-            {
-                PlayToSquare(BottomRightButton);
-            }
+                TopLeftButton,
+                TopMiddleButton,
+                TopRightButton,
+                MiddleLeftButton,
+                MiddleMiddleButton,
+                MiddleRightButton,
+                BottomLeftButton,
+                BottomMiddleButton,
+                BottomRightButton,
+            };
         }
 
         private void PlayToSquare(Button button)
