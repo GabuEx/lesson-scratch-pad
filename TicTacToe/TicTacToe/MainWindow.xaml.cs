@@ -31,6 +31,42 @@ namespace TicTacToe
         {
             Button senderButton = sender as Button;
             PlayToSquare(senderButton);
+            if (TopLeftButton.Content == "")
+            {
+                PlayToSquare(TopLeftButton);
+            }
+            else if (TopMiddleButton.Content == "")
+            {
+                PlayToSquare(TopMiddleButton);
+            }
+            else if (TopRightButton.Content == "")
+            {
+                PlayToSquare(TopRightButton);
+            }
+            else if (MiddleLeftButton.Content == "")
+            {
+                PlayToSquare(MiddleLeftButton);
+            }
+            else if (MiddleMiddleButton.Content == "")
+            {
+                PlayToSquare(MiddleMiddleButton);
+            }
+            else if (MiddleRightButton.Content == "")
+            {
+                PlayToSquare(MiddleRightButton);
+            }
+            else if (BottomLeftButton.Content == "")
+            {
+                PlayToSquare(BottomLeftButton);
+            }
+            else if (BottomMiddleButton.Content == "")
+            {
+                PlayToSquare(BottomMiddleButton);
+            }
+            else if (BottomRightButton.Content == "")
+            {
+                PlayToSquare(BottomRightButton);
+            }
         }
 
         private void PlayToSquare(Button button)
