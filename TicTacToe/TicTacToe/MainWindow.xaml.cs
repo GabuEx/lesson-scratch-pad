@@ -32,18 +32,7 @@ namespace TicTacToe
         {
             Button senderButton = sender as Button;
             PlayToSquare(senderButton);
-            Button[] squareButtons =
-            {
-                TopLeftButton,
-                TopMiddleButton,
-                TopRightButton,
-                MiddleLeftButton,
-                MiddleMiddleButton,
-                MiddleRightButton,
-                BottomLeftButton,
-                BottomMiddleButton,
-                BottomRightButton,
-            };
+            PlayForAI();
             Button aiSelectedButton = null;
 
             do
@@ -136,6 +125,31 @@ namespace TicTacToe
 
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
+            Restart();
+        }
+        private void Button_Click3(object sender, RoutedEventArgs e)
+        {
+            Restart();
+            PlayForAI();
+        }
+        private void PlayForAI()
+        {
+            Button[] squareButtons =
+            {
+                TopLeftButton,
+                TopMiddleButton,
+                TopRightButton,
+                MiddleLeftButton,
+                MiddleMiddleButton,
+                MiddleRightButton,
+                BottomLeftButton,
+                BottomMiddleButton,
+                BottomRightButton,
+            };
+        }
+
+        private void Restart()
+        {
             shouldPlaceAnO = false;
             playerHasWon = false;
             TopLeftButton.Content = "";
@@ -149,7 +163,5 @@ namespace TicTacToe
             BottomRightButton.Content = "";
             TextDisplay.Text = "";
         }
-        private void Button_Click3(object sender, RoutedEventArgs e)
-        { }
     }
 }
