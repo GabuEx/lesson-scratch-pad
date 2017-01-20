@@ -28,7 +28,8 @@
         <Button Content="" Name="BottomLeftButton" Grid.Row="4" Grid.Column="0" Click="Button_Click"/>
         <Button Content="" Name="BottomMiddleButton" Grid.Row="4" Grid.Column="1" Click="Button_Click"/>
         <Button Content="" Name="BottomRightButton" Grid.Row="4" Grid.Column="2" Click="Button_Click"/>
-        <Button Content="Reset" Name="ResetButton"  Grid.Row="1" Grid.Column="1" Click="Button_Click2"/>
+        <Button Content="Start as X" Name="StartasX"  Grid.Row="1" Grid.Column="0" Click="Button_Click2"/>
+        <Button Content="Start as O" Name="StartasO"  Grid.Row="1" Grid.Column="2" Click="Button_Click3"/>
         <TextBlock x:Name="TextDisplay" Text="" Grid.ColumnSpan="3" Grid.Row="0" TextAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Window>
