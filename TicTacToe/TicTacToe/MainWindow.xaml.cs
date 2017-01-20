@@ -33,14 +33,6 @@ namespace TicTacToe
             Button senderButton = sender as Button;
             PlayToSquare(senderButton);
             PlayForAI();
-            Button aiSelectedButton = null;
-
-            do
-            {
-                aiSelectedButton = squareButtons[random.Next(0, 8)];
-            } while (aiSelectedButton.Content != "");
-
-            PlayToSquare(aiSelectedButton);
         }
 
         private void PlayToSquare(Button button)
@@ -146,6 +138,14 @@ namespace TicTacToe
                 BottomMiddleButton,
                 BottomRightButton,
             };
+            Button aiSelectedButton = null;
+
+            do
+            {
+                aiSelectedButton = squareButtons[random.Next(0, 8)];
+            } while (aiSelectedButton.Content != "");
+
+            PlayToSquare(aiSelectedButton);
         }
 
         private void Restart()
