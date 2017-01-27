@@ -167,5 +167,30 @@ namespace TicTacToe
             BottomRightButton.Content = "";
             TextDisplay.Text = "";
         }
+            private bool CanPlayerWinByPlayingToButton(string player, Button squareButton)
+        {
+            if (button.Content != "")
+            {
+                return false;
+            }
+            if (button == TopLeftButton)
+            {
+                if (TopMiddleButton.Content == player &&
+                    TopRightButton.Content == player)
+                {
+                    return true;
+                }
+                else if (MiddleMiddleButton.Content == player &&
+                         BottomRightButton.Content == player)
+                {
+                    return true;
+                }
+                else if (MiddleLeftButton.Content == player &&
+                         BottomLeftButton.Content == player &&)
+                {
+                    return true;
+                }
+            }
+        }
     }
 }
