@@ -194,12 +194,131 @@ namespace TicTacToe
             else if (button == TopMiddleButton)
             {
                 if (TopLeftButton.Content == player &&
-                    TopRightButton.Content ==player)
+                    TopRightButton.Content == player)
                 {
                     return true;
                 }
                 else if (MiddleMiddleButton.Content == player &&
                     BottomMiddleButton.Content == player)
+                {
+                    return true;
+                }
+            }
+            else if (button == TopRightButton)
+            {
+                if (TopLeftButton.Content == player &&
+                    TopMiddleButton.Content == player)
+                {
+                    return true;
+                }
+                else if (MiddleMiddleButton.Content == player &&
+                    BottomLeftButton.Content == player)
+                {
+                    return true;
+                }
+                else if (MiddleRightButton.Content == player &&
+                    BottomRightButton.Content == player)
+                {
+                    return true;
+                }
+            }
+            else if (button == MiddleLeftButton)
+            {
+                if (TopLeftButton.Content == player &&
+                    BottomLeftButton.Content == player)
+                {
+                    return true;
+                }
+                else if (MiddleMiddleButton.Content == player &&
+                    MiddleRightButton.Content == player)
+                {
+                    return true;
+                }
+            }
+            else if (button == MiddleMiddleButton)
+            {
+                if (TopLeftButton.Content == player &&
+                    BottomRightButton.Content == player)
+                {
+                    return true;
+                }
+                else if (TopMiddleButton.Content == player &&
+                    BottomMiddleButton.Content == player)
+                {
+                    return true;
+                }
+                else if (TopRightButton.Content == player &&
+                    BottomLeftButton.Content == player)
+                {
+                    return true;
+                }
+                else if (MiddleLeftButton.Content == player &&
+                    MiddleRightButton.Content == player)
+                {
+                    return true;
+                }
+            }
+            else if (button == MiddleRightButton)
+            {
+                if (TopRightButton.Content == player &&
+                    BottomRightButton.Content == player)
+                {
+                    return true;
+                }
+                else if (MiddleLeftButton.Content == player &&
+                    MiddleMiddleButton.Content == player)
+                {
+                    return true;
+                }
+            }
+            else if (button == BottomLeftButton)
+            {
+                if (TopLeftButton.Content == player &&
+                    MiddleLeftButton.Contet == player)
+                {
+                    return true;
+                }
+                else if (TopRightButton.Content == player &&
+                    MiddleMiddleButton.Content == player)
+                {
+                    return true;
+                }
+                else if (BottomMiddleButton.Content == player &&
+                    BottomRightButton.Content == player)
+                {
+                    return true;
+                }
+            }
+            else if (button == BottomMiddleButton)
+            {
+                if ( BottomLeftButton.Content == player &&
+                    BottomRightButton.Content == player)
+                {
+                    return true;
+                }
+                else if (TopMiddleButton.Content == player &&
+                    MiddleMiddleButton.Content == player)
+                {
+                    return true;
+                }
+            }
+            else if (button == BottomRightButton)
+            {
+                if (TopLeftButton.Content == player &&
+                    MiddleMiddleButton.Content == player)
+                {
+                    return true;
+                }
+                else if (TopRightButton.Content == player &&
+                    MiddleRightButton.Content == player)
+                {
+                    return true;
+                }
+                else if (BottomLeftButton.Content == player &&
+                    BottomMiddleButton.Content == player)
+                {
+                    return true;
+                }
             }
         }
     }
