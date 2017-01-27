@@ -186,10 +186,20 @@ namespace TicTacToe
                     return true;
                 }
                 else if (MiddleLeftButton.Content == player &&
-                         BottomLeftButton.Content == player &&)
+                         BottomLeftButton.Content == player)
                 {
                     return true;
                 }
+            }
+            else if (button == TopMiddleButton)
+            {
+                if (TopLeftButton.Content == player &&
+                    TopRightButton.Content ==player)
+                {
+                    return true;
+                }
+                else if (MiddleMiddleButton.Content == player &&
+                    BottomMiddleButton.Content == player)
             }
         }
     }
