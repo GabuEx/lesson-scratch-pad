@@ -23,9 +23,25 @@ namespace TicTacToe
         private bool shouldPlaceAnO = false;
         private bool playerHasWon = false;
         private Random random = new Random();
+
+        private Button[] squareButtons = null;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            squareButtons = new Button[]
+            {
+                TopLeftButton,
+                TopMiddleButton,
+                TopRightButton,
+                MiddleLeftButton,
+                MiddleMiddleButton,
+                MiddleRightButton,
+                BottomLeftButton,
+                BottomMiddleButton,
+                BottomRightButton,
+            };
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -126,18 +142,6 @@ namespace TicTacToe
         }
         private void PlayForAI()
         {
-            Button[] squareButtons =
-            {
-                TopLeftButton,
-                TopMiddleButton,
-                TopRightButton,
-                MiddleLeftButton,
-                MiddleMiddleButton,
-                MiddleRightButton,
-                BottomLeftButton,
-                BottomMiddleButton,
-                BottomRightButton,
-            };
             Button aiSelectedButton = null;
 
             do
