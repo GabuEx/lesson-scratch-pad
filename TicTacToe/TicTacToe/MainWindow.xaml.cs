@@ -169,11 +169,11 @@ namespace TicTacToe
         }
             private bool CanPlayerWinByPlayingToButton(string player, Button squareButton)
         {
-            if (button.Content != "")
+            if (Button.Content != "")
             {
                 return false;
             }
-            if (button == TopLeftButton)
+            if (Button == TopLeftButton)
             {
                 if (TopMiddleButton.Content == player &&
                     TopRightButton.Content == player)
@@ -191,7 +191,7 @@ namespace TicTacToe
                     return true;
                 }
             }
-            else if (button == TopMiddleButton)
+            else if (Button == TopMiddleButton)
             {
                 if (TopLeftButton.Content == player &&
                     TopRightButton.Content == player)
@@ -204,7 +204,7 @@ namespace TicTacToe
                     return true;
                 }
             }
-            else if (button == TopRightButton)
+            else if (Button == TopRightButton)
             {
                 if (TopLeftButton.Content == player &&
                     TopMiddleButton.Content == player)
@@ -222,7 +222,7 @@ namespace TicTacToe
                     return true;
                 }
             }
-            else if (button == MiddleLeftButton)
+            else if (Button == MiddleLeftButton)
             {
                 if (TopLeftButton.Content == player &&
                     BottomLeftButton.Content == player)
@@ -235,7 +235,7 @@ namespace TicTacToe
                     return true;
                 }
             }
-            else if (button == MiddleMiddleButton)
+            else if (Button == MiddleMiddleButton)
             {
                 if (TopLeftButton.Content == player &&
                     BottomRightButton.Content == player)
@@ -258,7 +258,7 @@ namespace TicTacToe
                     return true;
                 }
             }
-            else if (button == MiddleRightButton)
+            else if (Button == MiddleRightButton)
             {
                 if (TopRightButton.Content == player &&
                     BottomRightButton.Content == player)
@@ -271,10 +271,10 @@ namespace TicTacToe
                     return true;
                 }
             }
-            else if (button == BottomLeftButton)
+            else if (Button == BottomLeftButton)
             {
                 if (TopLeftButton.Content == player &&
-                    MiddleLeftButton.Contet == player)
+                    MiddleLeftButton.Content == player)
                 {
                     return true;
                 }
@@ -289,7 +289,7 @@ namespace TicTacToe
                     return true;
                 }
             }
-            else if (button == BottomMiddleButton)
+            else if (Button == BottomMiddleButton)
             {
                 if ( BottomLeftButton.Content == player &&
                     BottomRightButton.Content == player)
@@ -302,7 +302,7 @@ namespace TicTacToe
                     return true;
                 }
             }
-            else if (button == BottomRightButton)
+            else if (Button == BottomRightButton)
             {
                 if (TopLeftButton.Content == player &&
                     MiddleMiddleButton.Content == player)
