@@ -23,6 +23,8 @@ namespace TicTacToe
         private bool shouldPlaceAnO = false;
         private bool playerHasWon = false;
         private Random random = new Random();
+        private string playerPieces = null;
+        private string aiPieces = null;
 
         private Button[] squareButtons = null;
 
@@ -151,10 +153,13 @@ namespace TicTacToe
                     break;
                 }
             }
-            do
+            if (aiSelectedButton == null)
             {
-                aiSelectedButton = squareButtons[random.Next(0, 8)];
-            } while (aiSelectedButton.Content != "");
+                do
+                {
+                    aiSelectedButton = squareButtons[random.Next(0, 8)];
+                } while (aiSelectedButton.Content != "");
+            }
 
             PlayToSquare(aiSelectedButton);
         }
@@ -173,7 +178,9 @@ namespace TicTacToe
             BottomMiddleButton.Content = "";
             BottomRightButton.Content = "";
             TextDisplay.Text = "";
-        }
+            playerPieces = null;
+            aiPieces = null;
+    }
             private bool CanPlayerWinByPlayingToButton(string player, Button button)
         {
             if (button.Content != "")
