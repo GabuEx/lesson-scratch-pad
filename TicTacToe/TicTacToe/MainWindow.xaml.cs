@@ -48,6 +48,16 @@ namespace TicTacToe
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (shouldPlaceAnO)
+            {
+                playerPieces = "O";
+                aiPieces = "X";
+            }
+            else if (shouldPlaceAnO)
+            {
+                playerPieces = "X";
+                aiPieces = "O";
+            }
             Button senderButton = sender as Button;
             PlayToSquare(senderButton);
             PlayForAI();
@@ -147,7 +157,7 @@ namespace TicTacToe
             Button aiSelectedButton = null;
             for (int i = 0; i < squareButtons.Length; i = i + 1)
             {
-                if (CanPlayerWinByPlayingToButton("O", squareButtons[i]))
+                if (CanPlayerWinByPlayingToButton(aiPieces, squareButtons[i]))
                 {
                     aiSelectedButton = squareButtons[i];
                     break;
