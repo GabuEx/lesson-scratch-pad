@@ -165,6 +165,17 @@ namespace TicTacToe
             }
             if (aiSelectedButton == null)
             {
+                for (int i = 0; i < squareButtons.Length; i = i + 1)
+                {
+                    if (CanPlayerWinByPlayingToButton(playerPieces, squareButtons[i]))
+                    {
+                        aiSelectedButton = squareButtons[i];
+                        break;
+                    }
+                }
+            }
+            if (aiSelectedButton == null)
+            {
                 do
                 {
                     aiSelectedButton = squareButtons[random.Next(0, 8)];
