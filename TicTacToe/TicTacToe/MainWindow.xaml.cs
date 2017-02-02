@@ -143,7 +143,14 @@ namespace TicTacToe
         private void PlayForAI()
         {
             Button aiSelectedButton = null;
-
+            for (int i = 0; i < squareButtons.Length; i = i + 1)
+            {
+                if (CanPlayerWinByPlayingToButton("O", squareButtons[i]))
+                {
+                    aiSelectedButton = squareButtons[i];
+                    break;
+                }
+            }
             do
             {
                 aiSelectedButton = squareButtons[random.Next(0, 8)];
