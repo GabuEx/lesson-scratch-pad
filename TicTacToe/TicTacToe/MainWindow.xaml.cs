@@ -167,7 +167,7 @@ namespace TicTacToe
             BottomRightButton.Content = "";
             TextDisplay.Text = "";
         }
-            private bool CanPlayerWinByPlayingToButton(string player, Button squareButton)
+            private bool CanPlayerWinByPlayingToButton(string player, Button button)
         {
             if (button.Content != "")
             {
@@ -319,6 +319,7 @@ namespace TicTacToe
                 {
                     return true;
                 }
+                return false;
             }
         }
     }
