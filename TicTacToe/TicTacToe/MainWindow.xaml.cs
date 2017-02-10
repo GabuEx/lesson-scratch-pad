@@ -162,22 +162,28 @@ namespace TicTacToe
         private void PlayForAI()
         {
             Button aiSelectedButton = null;
-            for (int i = 0; i < squareButtons.Length; i = i + 1)
-            {
-                if (CanPlayerWinByPlayingToButton(aiPieces, squareButtons[i]))
-                {
-                    aiSelectedButton = squareButtons[i];
-                    break;
-                }
-            }
-            if (aiSelectedButton == null)
+            if (aiDifficulty == AiDifficulty.Hard)
             {
                 for (int i = 0; i < squareButtons.Length; i = i + 1)
                 {
-                    if (CanPlayerWinByPlayingToButton(playerPieces, squareButtons[i]))
+                    if (CanPlayerWinByPlayingToButton(aiPieces, squareButtons[i]))
                     {
                         aiSelectedButton = squareButtons[i];
                         break;
+                    }
+                }
+            }
+            if (aiDifficulty == AiDifficulty.Hard || aiDifficulty == AiDifficulty.Medium)
+            {
+                if (aiSelectedButton == null)
+                {
+                    for (int i = 0; i < squareButtons.Length; i = i + 1)
+                    {
+                        if (CanPlayerWinByPlayingToButton(playerPieces, squareButtons[i]))
+                        {
+                            aiSelectedButton = squareButtons[i];
+                            break;
+                        }
                     }
                 }
             }
