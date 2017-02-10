@@ -18,6 +18,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Button Content="" Name="TopLeftButton"  Grid.Row="2" Grid.Column="0" Click="Button_Click"/>
         <Button Content="" Name="TopMiddleButton" Grid.Row="2" Grid.Column="1" Click="Button_Click"/>
@@ -31,5 +32,8 @@
         <Button Content="Start as X" Name="StartasX"  Grid.Row="1" Grid.Column="0" Click="Button_Click2"/>
         <Button Content="Start as O" Name="StartasO"  Grid.Row="1" Grid.Column="2" Click="Button_Click3"/>
         <TextBlock x:Name="TextDisplay" Text="" Grid.ColumnSpan="3" Grid.Row="0" TextAlignment="Center" VerticalAlignment="Center"/>
+        <RadioButton x:Name="EasyButton" Grid.Row="5" Grid.Column="0" GroupName="DifficultyButtons" Content="Easy AI" Margin="5" IsChecked="True" Checked="EasyButton_Checked"/>
+        <RadioButton x:Name="MediumButton" Grid.Row="5" Grid.Column="1" GroupName="DifficultyButtons" Content="Medium AI" Margin="5" Checked="MediumButton_Checked"/>
+        <RadioButton x:Name="HardButton" Grid.Row="5" Grid.Column="2" GroupName="DifficultyButtons" Content="Hard AI" Margin="5" Checked="HardButton_Checked"/>
     </Grid>
 </Window>

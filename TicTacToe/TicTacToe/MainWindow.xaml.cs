@@ -357,5 +357,16 @@ namespace TicTacToe
             }
             return false;
         }
+        private void EasyButton_Checked(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void MediumButton_Checked(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void HardButton_Checked(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }
