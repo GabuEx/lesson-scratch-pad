@@ -28,6 +28,7 @@ namespace TicTacToe
         }
         private bool shouldPlaceAnO = false;
         private bool playerHasWon = false;
+        private bool gameIsOver = false;
         private Random random = new Random();
         private string playerPieces = null;
         private string aiPieces = null;
@@ -148,6 +149,18 @@ namespace TicTacToe
                 TextDisplay.Text = "O wins!";
                 playerHasWon = true;
             }
+            else if (TopLeftButton.Content != "" &&
+                TopMiddleButton.Content != "" &&
+                TopRightButton.Content != "" &&
+                MiddleLeftButton.Content != "" &&
+                MiddleMiddleButton.Content != "" &&
+                MiddleRightButton.Content != "" &&
+                BottomLeftButton.Content != "" &&
+                BottomMiddleButton.Content != "" &&
+                BottomRightButton.Content != "")
+            {
+                TextDisplay.Text = "It's a tie!";
+            }
         }
 
         private void Button_Click2(object sender, RoutedEventArgs e)
@@ -159,6 +172,8 @@ namespace TicTacToe
             Restart();
             PlayForAI();
         }
+        if (gameIsOver)
+        {
         private void PlayForAI()
         {
             Button aiSelectedButton = null;
@@ -187,6 +202,7 @@ namespace TicTacToe
                     }
                 }
             }
+        }
             if (aiSelectedButton == null)
             {
                 do
