@@ -20,11 +20,18 @@ namespace TicTacToe
     /// </summary>
     public partial class MainWindow : Window
     {
+        private enum AiDifficulty
+        {
+            Easy,
+            Medium,
+            Hard,
+        }
         private bool shouldPlaceAnO = false;
         private bool playerHasWon = false;
         private Random random = new Random();
         private string playerPieces = null;
         private string aiPieces = null;
+        private AiDifficulty aiDifficulty = AiDifficulty.Easy;
 
         private Button[] squareButtons = null;
 
@@ -359,14 +366,17 @@ namespace TicTacToe
         }
         private void EasyButton_Checked(object sender, RoutedEventArgs e)
         {
+            aiDifficulty = AiDifficulty.Easy;
         }
 
         private void MediumButton_Checked(object sender, RoutedEventArgs e)
         {
+            aiDifficulty = AiDifficulty.Medium;
         }
 
         private void HardButton_Checked(object sender, RoutedEventArgs e)
         {
+            aiDifficulty = AiDifficulty.Hard;
         }
     }
 }
