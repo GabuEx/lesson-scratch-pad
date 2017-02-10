@@ -203,16 +203,16 @@ namespace TicTacToe
                         }
                     }
                 }
-            }
-            if (aiSelectedButton == null)
-            {
-                do
+                if (aiSelectedButton == null)
                 {
-                    aiSelectedButton = squareButtons[random.Next(0, 8)];
-                } while (aiSelectedButton.Content != "");
-            }
+                    do
+                    {
+                        aiSelectedButton = squareButtons[random.Next(0, 8)];
+                    } while (aiSelectedButton.Content != "");
+                }
 
-            PlayToSquare(aiSelectedButton);
+                PlayToSquare(aiSelectedButton);
+            }
         }
 
         private void Restart()
