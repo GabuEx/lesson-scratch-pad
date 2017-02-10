@@ -53,7 +53,7 @@ namespace TicTacToe
                 playerPieces = "O";
                 aiPieces = "X";
             }
-            else if (shouldPlaceAnO)
+            else
             {
                 playerPieces = "X";
                 aiPieces = "O";
