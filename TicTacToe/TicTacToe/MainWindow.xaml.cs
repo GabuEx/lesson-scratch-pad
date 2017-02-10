@@ -175,7 +175,7 @@ namespace TicTacToe
         }
         private void PlayForAI()
         {
-            if (!gameIsOver)
+            if (!gameIsOver && !playerHasWon)
             {
                 Button aiSelectedButton = null;
                 if (aiDifficulty == AiDifficulty.Hard)
