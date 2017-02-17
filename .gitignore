@@ -2,5 +2,11 @@ Calculator/Calculator/bin/*
 Calculator/Calculator/obj/*
 TicTacToe/TicTacToe/bin/*
 TicTacToe/TicTacToe/obj/*
+SuperCoolRpg/SuperCoolRpg/SuperCoolRpg/bin/*
+SuperCoolRpg/SuperCoolRpg/SuperCoolRpg/obj/*
+SuperCoolRpg/SuperCoolRpg/SuperCoolRpgContent/bin/*
+SuperCoolRpg/SuperCoolRpg/SuperCoolRpgContent/obj/*
 .vs/*
 *.suo
+*.csproj.user
+*.cachefile

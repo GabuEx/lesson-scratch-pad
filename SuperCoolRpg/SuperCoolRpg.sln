@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 14 for Windows Desktop
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperCoolRpg", "SuperCoolRpg\SuperCoolRpg\SuperCoolRpg.csproj", "{E1D5CE49-24BA-4760-ADCF-40A394B29CCD}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "SuperCoolRpgContent", "SuperCoolRpg\SuperCoolRpgContent\SuperCoolRpgContent.contentproj", "{8D627CD7-231D-49C5-8A9C-EE65FAEFB86C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1D5CE49-24BA-4760-ADCF-40A394B29CCD}.Debug|x86.ActiveCfg = Debug|x86
+		{E1D5CE49-24BA-4760-ADCF-40A394B29CCD}.Debug|x86.Build.0 = Debug|x86
+		{E1D5CE49-24BA-4760-ADCF-40A394B29CCD}.Release|x86.ActiveCfg = Release|x86
+		{E1D5CE49-24BA-4760-ADCF-40A394B29CCD}.Release|x86.Build.0 = Release|x86
+		{8D627CD7-231D-49C5-8A9C-EE65FAEFB86C}.Debug|x86.ActiveCfg = Debug|x86
+		{8D627CD7-231D-49C5-8A9C-EE65FAEFB86C}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
