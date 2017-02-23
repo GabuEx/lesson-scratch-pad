@@ -78,20 +78,20 @@ namespace SuperCoolRpg
             // TODO: Add your update logic here
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Left))
             {
-                lightWarriorsPosition.X = Math.Max(lightWarriorsPosition.X - 1, 0);
+                lightWarriorsPosition.X = Math.Max(lightWarriorsPosition.X - 16, 0);
             }
             else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Right))
             {
-                lightWarriorsPosition.X = Math.Min(lightWarriorsPosition.X + 1, Window.ClientBounds.Width - 16);
+                lightWarriorsPosition.X = Math.Min(lightWarriorsPosition.X + 16, Window.ClientBounds.Width - 16);
             }
 
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Up))
             {
-                lightWarriorsPosition.Y = Math.Max(lightWarriorsPosition.Y - 1, 0);
+                lightWarriorsPosition.Y = Math.Max(lightWarriorsPosition.Y - 16, 0);
             }
             else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Down))
             {
-                lightWarriorsPosition.Y = Math.Min(lightWarriorsPosition.Y + 1, Window.ClientBounds.Height - 16);
+                lightWarriorsPosition.Y = Math.Min(lightWarriorsPosition.Y + 16, Window.ClientBounds.Height - 16);
             }
 
             base.Update(gameTime);
@@ -108,6 +108,7 @@ namespace SuperCoolRpg
             // TODO: Add your drawing code here
             spriteBatch.Begin();
             spriteBatch.Draw(lightWarriorsTexture, lightWarriorsPosition, new Rectangle(78, 313, 16, 16), Color.White);
+            spriteBatch.Draw(lightWarriorsTexture, new Vector2(50, 50), new Rectangle(1, 40, 16, 16), Color.White);
             spriteBatch.End();
 
             base.Draw(gameTime);
