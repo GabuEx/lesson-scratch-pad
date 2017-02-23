@@ -10,3 +10,4 @@ SuperCoolRpg/SuperCoolRpg/SuperCoolRpgContent/obj/*
 *.suo
 *.csproj.user
 *.cachefile
+*.user

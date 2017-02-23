@@ -50,7 +50,7 @@ namespace SuperCoolRpg
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            lightWarriorsTexture = this.Content.Load<Texture2D>("LightWarriors");
+            lightWarriorsTexture = this.Content.Load<Texture2D>("SpriteSheets/LightWarriors");
         }
 
         /// <summary>
