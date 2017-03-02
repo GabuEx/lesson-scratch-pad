@@ -43,9 +43,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MapFiles\Corneria.tmx">
+    <None Include="MapFiles\Corneria.tmx">
       <Name>Corneria</Name>
-    </Compile>
+      <Importer>TextureImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
