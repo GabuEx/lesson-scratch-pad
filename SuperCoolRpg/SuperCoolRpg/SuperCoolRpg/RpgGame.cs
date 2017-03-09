@@ -113,6 +113,7 @@ namespace SuperCoolRpg
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        double timeSinceLastCharacterMove = 0;
         protected override void Update(GameTime gameTime)
         {
             // Allows the game to exit
@@ -120,27 +121,35 @@ namespace SuperCoolRpg
             {
                 this.Exit();
             }
+            if (timeSinceLastCharacterMove > 500)
+            {
+                timeSinceLastCharacterMove = 0;
 
-            // TODO: Add your update logic here
-            if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Left))
-            {
-                lightWarriorsPosition.X = Math.Max(lightWarriorsPosition.X - 16, 0);
-            }
-            else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Right))
-            {
-                lightWarriorsPosition.X = Math.Min(lightWarriorsPosition.X + 16, Window.ClientBounds.Width - 16);
-            }
+                // TODO: Add your update logic here
+                if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Left))
+                {
+                    lightWarriorsPosition.X = Math.Max(lightWarriorsPosition.X - 16, 0);
+                }
+                else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Right))
+                {
+                    lightWarriorsPosition.X = Math.Min(lightWarriorsPosition.X + 16, Window.ClientBounds.Width - 16);
+                }
 
-            if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Up))
-            {
-                lightWarriorsPosition.Y = Math.Max(lightWarriorsPosition.Y - 16, 0);
-            }
-            else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Down))
-            {
-                lightWarriorsPosition.Y = Math.Min(lightWarriorsPosition.Y + 16, Window.ClientBounds.Height - 16);
-            }
+                if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Up))
+                {
+                    lightWarriorsPosition.Y = Math.Max(lightWarriorsPosition.Y - 16, 0);
+                }
+                else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Down))
+                {
+                    lightWarriorsPosition.Y = Math.Min(lightWarriorsPosition.Y + 16, Window.ClientBounds.Height - 16);
+                }
 
-            base.Update(gameTime);
+                base.Update(gameTime);
+            }
+            else
+            {
+                timeSinceLastCharacterMove = timeSinceLastCharacterMove + gameTime.ElapsedGameTime.TotalMilliseconds;
+            }
         }
 
         /// <summary>
