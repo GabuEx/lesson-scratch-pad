@@ -121,7 +121,7 @@ namespace SuperCoolRpg
             {
                 this.Exit();
             }
-            if (timeSinceLastCharacterMove > 500)
+            if (timeSinceLastCharacterMove > 75)
             {
                 timeSinceLastCharacterMove = 0;
 
