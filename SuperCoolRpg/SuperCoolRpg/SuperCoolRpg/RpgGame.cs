@@ -92,7 +92,7 @@ namespace SuperCoolRpg
 
                 for (int x = 0; x < Math.Min(dataElements.Length, mapWidth); x++)
                 {
-                    mapIndexes[x, y] = int.Parse(dataElements[x]);
+                    mapIndexes[x, y] = int.Parse(dataElements[x]) - 1;
                 }
             }
 
@@ -173,7 +173,7 @@ namespace SuperCoolRpg
             {
                 for (int y = 0; y < mapHeight; y++)
                 {
-                    int tileIndex = mapIndexes[x, y] - 1;
+                    int tileIndex = mapIndexes[x, y];
                     int tileXPosition = tileIndex % mapTextureColumnCount;
                     int tileYPosition = tileIndex / mapTextureColumnCount;
 
