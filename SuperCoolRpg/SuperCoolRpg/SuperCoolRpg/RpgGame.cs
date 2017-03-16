@@ -126,8 +126,6 @@ namespace SuperCoolRpg
                 timeSinceLastCharacterMove = 0;
 
                 // TODO: Add your update logic here
-                if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Left))
-                {
                     Vector2 newPosition = lightWarriorsPosition;
 
                     if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Left))
@@ -139,19 +137,18 @@ namespace SuperCoolRpg
                         newPosition.X = Math.Min(newPosition.X + 1, Window.ClientBounds.Width - 16);
                     }
 
+                    if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Up))
+                    {
+                        lightWarriorsPosition.Y = Math.Max(lightWarriorsPosition.Y - 1, 0);
+                    }
+                    else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Down))
+                    {
+                        lightWarriorsPosition.Y = Math.Min(lightWarriorsPosition.Y + 1, Window.ClientBounds.Height - 16);
+                    }
                     if (mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 838 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 889 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 891 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 892 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 890 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 894 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 842 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 887)
                     {
                         lightWarriorsPosition = newPosition;
                         {
-                            if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Up))
-                            {
-                                lightWarriorsPosition.Y = Math.Max(lightWarriorsPosition.Y - 1, 0);
-                            }
-                            else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Down))
-                            {
-                                lightWarriorsPosition.Y = Math.Min(lightWarriorsPosition.Y + 1, Window.ClientBounds.Height - 16);
-                            }
-
                             base.Update(gameTime);
                         }
                     }
