@@ -124,10 +124,6 @@ namespace SuperCoolRpg
             if (timeSinceLastCharacterMove > 75)
             {
                 timeSinceLastCharacterMove = 0;
-            else
-                {
-                    timeSinceLastCharacterMove = timeSinceLastCharacterMove + gameTime.ElapsedGameTime.TotalMilliseconds;
-                }
 
                 // TODO: Add your update logic here
 
@@ -154,6 +150,10 @@ namespace SuperCoolRpg
                 {
                     lightWarriorsPosition = newPosition;
                 }
+            }
+            else
+            {
+                timeSinceLastCharacterMove = timeSinceLastCharacterMove + gameTime.ElapsedGameTime.TotalMilliseconds;
             }
             base.Update(gameTime);
         }
