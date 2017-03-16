@@ -124,6 +124,10 @@ namespace SuperCoolRpg
             if (timeSinceLastCharacterMove > 75)
             {
                 timeSinceLastCharacterMove = 0;
+            else
+                {
+                    timeSinceLastCharacterMove = timeSinceLastCharacterMove + gameTime.ElapsedGameTime.TotalMilliseconds;
+                }
 
                 // TODO: Add your update logic here
 
@@ -140,19 +144,15 @@ namespace SuperCoolRpg
 
                 if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Up))
                 {
-                    lightWarriorsPosition.Y = Math.Max(lightWarriorsPosition.Y - 1, 0);
+                    newPosition.Y = Math.Max(newPosition.Y - 1, 0);
                 }
                 else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Down))
                 {
-                    lightWarriorsPosition.Y = Math.Min(lightWarriorsPosition.Y + 1, Window.ClientBounds.Height - 16);
+                    newPosition.Y = Math.Min(newPosition.Y + 1, Window.ClientBounds.Height - 16);
                 }
                 if (mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 838 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 889 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 891 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 892 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 890 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 894 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 842 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 887)
                 {
                     lightWarriorsPosition = newPosition;
-                }
-                else
-                {
-                    timeSinceLastCharacterMove = timeSinceLastCharacterMove + gameTime.ElapsedGameTime.TotalMilliseconds;
                 }
             }
             base.Update(gameTime);
