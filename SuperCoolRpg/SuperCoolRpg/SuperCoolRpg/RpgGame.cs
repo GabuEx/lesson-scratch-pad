@@ -146,7 +146,7 @@ namespace SuperCoolRpg
                 {
                     newPosition.Y = Math.Min(newPosition.Y + 1, Window.ClientBounds.Height - 16);
                 }
-                if (mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 838 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 889 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 891 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 892 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 890 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 894 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 842 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 887)
+                if (mapIndexes[(int)newPosition.X, (int)newPosition.Y] == 838 || mapIndexes[(int)newPosition.X, (int)newPosition.Y] == 889 || mapIndexes[(int)newPosition.X, (int)newPosition.Y] == 891 || mapIndexes[(int)newPosition.X, (int)newPosition.Y] == 892 || mapIndexes[(int)newPosition.X, (int)newPosition.Y] == 890 || mapIndexes[(int)newPosition.X, (int)newPosition.Y] == 894 || mapIndexes[(int)newPosition.X, (int)newPosition.Y] == 842 || mapIndexes[(int)newPosition.X, (int)newPosition.Y] == 887)
                 {
                     lightWarriorsPosition = newPosition;
                 }
