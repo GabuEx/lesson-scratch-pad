@@ -22,7 +22,7 @@ namespace SuperCoolRpg
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Texture2D lightWarriorsTexture;
-        Vector2 lightWarriorsPosition;
+        Vector2 lightWarriorsPosition = new Vector2(5, 6);
 
         Texture2D mapTexture;
         int mapTextureColumnCount;
@@ -128,27 +128,38 @@ namespace SuperCoolRpg
                 // TODO: Add your update logic here
                 if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Left))
                 {
-                    lightWarriorsPosition.X = Math.Max(lightWarriorsPosition.X - 16, 0);
-                }
-                else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Right))
-                {
-                    lightWarriorsPosition.X = Math.Min(lightWarriorsPosition.X + 16, Window.ClientBounds.Width - 16);
-                }
+                    Vector2 newPosition = lightWarriorsPosition;
 
-                if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Up))
-                {
-                    lightWarriorsPosition.Y = Math.Max(lightWarriorsPosition.Y - 16, 0);
-                }
-                else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Down))
-                {
-                    lightWarriorsPosition.Y = Math.Min(lightWarriorsPosition.Y + 16, Window.ClientBounds.Height - 16);
-                }
+                    if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Left))
+                    {
+                        newPosition.X = Math.Max(newPosition.X - 1, 0);
+                    }
+                    else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Right))
+                    {
+                        newPosition.X = Math.Min(newPosition.X + 1, Window.ClientBounds.Width - 16);
+                    }
 
-                base.Update(gameTime);
-            }
-            else
-            {
-                timeSinceLastCharacterMove = timeSinceLastCharacterMove + gameTime.ElapsedGameTime.TotalMilliseconds;
+                    if (mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 838 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 889 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 891 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 892 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 890 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 894 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 842 || mapIndexes[(int)lightWarriorsPosition.X, (int)lightWarriorsPosition.Y] == 887)
+                    {
+                        lightWarriorsPosition = newPosition;
+                        {
+                            if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Up))
+                            {
+                                lightWarriorsPosition.Y = Math.Max(lightWarriorsPosition.Y - 1, 0);
+                            }
+                            else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Down))
+                            {
+                                lightWarriorsPosition.Y = Math.Min(lightWarriorsPosition.Y + 1, Window.ClientBounds.Height - 16);
+                            }
+
+                            base.Update(gameTime);
+                        }
+                    }
+                    else
+                    {
+                        timeSinceLastCharacterMove = timeSinceLastCharacterMove + gameTime.ElapsedGameTime.TotalMilliseconds;
+                    }
+                }
             }
         }
 
@@ -175,7 +186,7 @@ namespace SuperCoolRpg
                 }
             }
 
-            spriteBatch.Draw(lightWarriorsTexture, lightWarriorsPosition, new Rectangle(78, 313, 16, 16), Color.White);
+            spriteBatch.Draw(lightWarriorsTexture, new Vector2(lightWarriorsPosition.X * 16, lightWarriorsPosition.Y * 16), new Rectangle(78, 313, 16, 16), Color.White);
             spriteBatch.Draw(lightWarriorsTexture, new Vector2(50, 50), new Rectangle(1, 40, 16, 16), Color.White);
 
             spriteBatch.End();
